@@ -1,0 +1,67 @@
+﻿@using WebProductos.Models
+
+@model E_Producto
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VistaEditar</title>
+
+    <!--Agregando archivo .css de bootstrap -->
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <!--Agregando archivo .js de boostrap -->
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Editar Producto</h1>
+
+        <form action="/Producto/Actualizar" method="post">
+
+            <input type="hidden" name="IdProducto" value="@Model.IdProducto" />
+
+            <label>Descripción</label>
+            <input type="text" name="Descripcion" class="form-control" value="@Model.Descripcion" />
+            <br /><br />
+
+            <label>Precio</label>
+            <input type="text" name="Precio" class="form-control" value="@Model.Precio" />
+            <br /><br />
+
+            <label>Fecha Ingreso</label>
+            <input type="date" name="FechaIngreso" class="form-control" value="@Model.FechaIngreso.ToString("yyyy-MM-dd")" />
+            <br /><br />
+
+            <label>¿Esta Disponible?</label>
+            @if (Model.Disponible == true)
+            {
+                <div>
+                    <input type="radio" name="Disponible" value="true" checked />
+                    <label>Si</label>
+
+                    <input type="radio" name="Disponible" value="false" />
+                    <label>No</label>
+                </div>
+            }
+            else
+            {
+                <div>
+                    <input type="radio" name="Disponible" value="true" />
+                    <label>Si</label>
+
+                    <input type="radio" name="Disponible" value="false" checked />
+                    <label>No</label>
+                </div>
+            }
+            <br />
+            <input type="submit" value="Actualizar" class="btn btn-success" />
+        </form>
+    </div>
+</body>
+</html>

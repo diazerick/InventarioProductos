@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>VistaAgregar</title>
+
+    <!--Agregando archivo .css de bootstrap -->
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <!--Agregando archivo .js de boostrap -->
+    <script src="~/Scripts/bootstrap.js"></script>
+</head>
+<body>
+    <div class="container"> 
+        <h1>Nuevo Producto</h1>
+
+        <form action="/Producto/Agregar" method="post">
+            <label>Descripción</label>
+            <input type="text" name="Descripcion" class="form-control"/>
+            <br /><br />
+
+            <label>Precio</label>
+            <input type="text" name="Precio" class="form-control"/>
+            <br /><br />
+
+            <label>Fecha Ingreso</label>
+            <input type="date" name="FechaIngreso" class="form-control"/>
+            <br /><br />
+
+            <label>¿Esta Disponible?</label>
+            <div>
+                <input type="radio" name="Disponible" value="true"/>
+                <label>Si</label>
+
+                <input type="radio" name="Disponible" value="false" />
+                <label>No</label>
+            </div>
+            <br />
+            <input type="submit" value="Registrar" class="btn btn-success"/>
+        </form>
+    </div>
+</body>
+</html>
