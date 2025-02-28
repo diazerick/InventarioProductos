@@ -19,8 +19,8 @@ namespace WebProductos.Models
 
         public bool Disponible { get; set; }
 
+        public string DireccionTienda { get; set; }
         public string Vendedor { get; set; }
-        public string Gerente { get; set; }
 
         //Propiedades full o de solo lecutura
         public DateTime FechaCaducidad
