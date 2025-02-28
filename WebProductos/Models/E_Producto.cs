@@ -11,6 +11,7 @@ namespace WebProductos.Models
         public int IdProducto { get; set; }
 
         public string Descripcion { get; set; }
+        public string Imagen { get; set; }
 
         public decimal Precio { get; set; }
 
@@ -19,6 +20,7 @@ namespace WebProductos.Models
         public bool Disponible { get; set; }
 
         public string Vendedor { get; set; }
+        public string Gerente { get; set; }
 
         //Propiedades full o de solo lecutura
         public DateTime FechaCaducidad
