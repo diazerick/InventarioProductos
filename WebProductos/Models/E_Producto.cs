@@ -9,6 +9,8 @@
         public DateTime FechaIngreso { get; set; }
         public bool Disponible { get; set; }
 
+        public string Gerente { get; set; }
+
         //Propiedades de solo lectura o full
         public DateTime FechaCaducidad
         {
