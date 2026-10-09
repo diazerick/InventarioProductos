@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<h1>Registrar Producto</h1>
+
+@if(TempData["validaciones"] != null)
+{
+    <div class="alert alert-warning">
+        @Html.Raw(TempData["validaciones"])
+    </div>
+}
+
+<form action="/Home/Agregar" method="post">
+    <label>Descripcion</label>
+    <input type="text" name="Descripcion" required/>
+    <br />
+
+    <label>Precio</label>
+    <input type="text" name="Precio" required/>
+    <br />
+
+    <label>Fecha Ingreso</label>
+    <input type="date" name="FechaIngreso" required/>
+    <br />
+
+    <label>¿Disponible?</label>
+    <div>
+        <input type="radio" name="Disponible" value="true" required/>
+        <label>Si</label>
+
+        <input type="radio" name="Disponible" value="false"/>
+        <label>No</label>
+    </div>
+    <button type="submit">Registrar</button>
+</form>
